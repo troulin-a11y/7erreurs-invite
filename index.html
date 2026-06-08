@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>7 erreurs IA - Invitation</title>
+<meta property="og:title" content="Rejoins-moi sur 7 erreurs IA">
+<meta property="og:description" content="L'IA genere les differences sur tes photos. Trouve-les avant tes amis !">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html, body { background: #0b0f17; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  background: linear-gradient(180deg, #0b0f17 0%, #171c2b 60%, #1f2a48 100%);
+  color: #e6e9ef;
+  min-height: 100vh; min-height: 100dvh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 32px 24px; text-align: center;
+}
+.logo { font-size: 64px; line-height: 1; margin-bottom: 16px; }
+h1 { font-size: 26px; font-weight: 900; margin-bottom: 8px; letter-spacing: -0.5px; }
+.sub { color: #9aa3b2; font-size: 15px; line-height: 1.5; margin-bottom: 32px; max-width: 320px; }
+.code-label { color: #6f7a91; font-size: 11px; letter-spacing: 2px; margin-bottom: 8px; }
+.code-box {
+  background: rgba(36, 119, 255, 0.12);
+  border: 1.5px solid #2477ff;
+  border-radius: 16px;
+  padding: 14px 28px;
+  margin-bottom: 28px;
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-size: 26px; font-weight: 900;
+  color: #20d7ff; letter-spacing: 6px;
+}
+.btn {
+  display: flex; align-items: center; justify-content: center;
+  padding: 17px 24px;
+  border-radius: 16px;
+  font-weight: 800; font-size: 16px;
+  text-decoration: none;
+  margin: 7px 0;
+  width: 100%; max-width: 320px;
+  transition: transform 0.1s ease, opacity 0.2s ease;
+  border: none; cursor: pointer;
+}
+.btn:active { transform: scale(0.97); }
+.btn-primary { background: #2477ff; color: #fff; box-shadow: 0 6px 24px rgba(36, 119, 255, 0.3); }
+.btn-store {
+  background: rgba(255,255,255,0.05); color: #fff;
+  border: 1px solid #3a4663;
+}
+.divider {
+  display: flex; align-items: center; gap: 12px;
+  width: 100%; max-width: 320px;
+  margin: 18px 0;
+  color: #6f7a91; font-size: 12px;
+}
+.divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: #3a4663; }
+.footer { color: #6f7a91; font-size: 12px; margin-top: 36px; max-width: 320px; line-height: 1.5; }
+.hidden { display: none !important; }
+.invalid { color: #ff5252; font-size: 14px; margin-top: 18px; max-width: 320px; }
+</style>
+</head>
+<body>
+  <div class="logo">&#x1F50D;</div>
+  <h1>Rejoins-moi sur 7 erreurs IA</h1>
+  <p class="sub">L'IA g&eacute;n&egrave;re les diff&eacute;rences sur tes photos. Trouve-les avant tes amis !</p>
+
+  <div id="ok-block" class="hidden">
+    <div class="code-label">CODE AMI</div>
+    <div class="code-box" id="code-display">------</div>
+
+    <a id="open-app" href="#" class="btn btn-primary">Ouvrir dans l'app</a>
+
+    <div class="divider">App pas install&eacute;e ?</div>
+
+    <a id="store-ios" href="https://apps.apple.com/app/id6776700975" class="btn btn-store hidden">T&eacute;l&eacute;charger sur App Store</a>
+    <a id="store-android" href="https://play.google.com/store/apps/details?id=com.erreurs7.ai" class="btn btn-store hidden">T&eacute;l&eacute;charger sur Google Play</a>
+
+    <p class="footer">Tu peux aussi entrer le code <strong id="code-footer">------</strong> dans l'app (Classement &rarr; Amis).</p>
+  </div>
+
+  <div id="error-block" class="hidden invalid">
+    Code d'invitation manquant ou invalide dans l'URL.
+  </div>
+
+<script>
+(function() {
+  // Lit ?code=XXX de l'URL et nettoie -> uniquement [A-Z0-9], 4 a 12 chars.
+  var params = new URLSearchParams(window.location.search);
+  var raw = (params.get('code') || '').toString();
+  var code = raw.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 12);
+
+  if (!code || code.length < 4) {
+    document.getElementById('error-block').classList.remove('hidden');
+    return;
+  }
+
+  document.getElementById('ok-block').classList.remove('hidden');
+  document.getElementById('code-display').textContent = code;
+  document.getElementById('code-footer').textContent = code;
+
+  var schemeUrl = 'sept-erreurs-ia://friend?code=' + encodeURIComponent(code);
+  document.getElementById('open-app').setAttribute('href', schemeUrl);
+
+  var ua = navigator.userAgent || '';
+  var isIOS = /iPhone|iPad|iPod/i.test(ua);
+  var isAndroid = /Android/i.test(ua);
+  var iosBtn = document.getElementById('store-ios');
+  var androidBtn = document.getElementById('store-android');
+
+  if (isIOS) iosBtn.classList.remove('hidden');
+  else if (isAndroid) androidBtn.classList.remove('hidden');
+  else { iosBtn.classList.remove('hidden'); androidBtn.classList.remove('hidden'); }
+
+  // Tente d'ouvrir l'app automatiquement sur mobile.
+  if (isIOS || isAndroid) {
+    setTimeout(function() { window.location.href = schemeUrl; }, 250);
+  }
+})();
+</script>
+</body>
+</html>
