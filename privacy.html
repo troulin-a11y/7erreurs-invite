@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Politique de confidentialité - 7 erreurs IA</title>
+<meta name="description" content="Politique de confidentialite de l'app 7 erreurs IA. Toute l'IA est on-device. Aucune photo n'est envoyee a un serveur.">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #0b0f17; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(180deg, #0b0f17 0%, #171c2b 100%);
+  color: #e6e9ef;
+  min-height: 100vh;
+  padding: 32px 20px;
+  line-height: 1.6;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { color: #20d7ff; font-size: 32px; font-weight: 900; margin-bottom: 8px; letter-spacing: -0.5px; }
+h2 { color: #fff; font-size: 22px; font-weight: 900; margin-top: 36px; margin-bottom: 10px; border-bottom: 1px solid #3a4663; padding-bottom: 6px; }
+h3 { color: #ffd166; font-size: 17px; font-weight: 800; margin-top: 20px; margin-bottom: 8px; }
+p { color: #c4cad6; margin-bottom: 12px; }
+ul { margin-left: 22px; margin-bottom: 14px; }
+li { color: #c4cad6; margin-bottom: 6px; }
+strong { color: #fff; }
+em { color: #9aa3b2; font-style: italic; }
+a { color: #2477ff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.meta { color: #6f7a91; font-size: 13px; margin-bottom: 24px; }
+.highlight {
+  background: rgba(36, 119, 255, 0.08);
+  border-left: 3px solid #2477ff;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+.warning {
+  background: rgba(255, 159, 10, 0.08);
+  border-left: 3px solid #ff9f0a;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+.lang-switch {
+  display: flex; gap: 12px; justify-content: center;
+  margin: 24px 0 32px; padding-bottom: 16px;
+  border-bottom: 1px solid #3a4663;
+}
+.lang-switch a {
+  padding: 8px 18px; border: 1px solid #3a4663; border-radius: 8px;
+  color: #c4cad6; font-weight: 800; font-size: 13px;
+}
+.lang-switch a:hover, .lang-switch a.active {
+  background: #2477ff; color: #fff; border-color: #2477ff; text-decoration: none;
+}
+.footer { color: #6f7a91; font-size: 12px; text-align: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid #3a4663; }
+.hidden { display: none; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>Politique de confidentialité</h1>
+  <div class="meta">7 erreurs IA &middot; Derni&egrave;re mise &agrave; jour : 10 juin 2026</div>
+
+  <div class="lang-switch">
+    <a id="btn-fr" href="#" class="active">Fran&ccedil;ais</a>
+    <a id="btn-en" href="#">English</a>
+  </div>
+
+  <!-- ============== VERSION FRANCAISE ============== -->
+  <div id="lang-fr">
+
+    <div class="highlight">
+      <p><strong>R&eacute;sum&eacute; en une phrase :</strong> tes photos restent sur ton t&eacute;l&eacute;phone, jamais envoy&eacute;es nulle part. L'IA tourne en local. On stocke uniquement ton pseudo et tes scores anonymes.</p>
+    </div>
+
+    <h2>1. Qui sommes-nous</h2>
+    <p>L'app <strong>7 erreurs IA</strong> est d&eacute;velopp&eacute;e par <strong>Thierry Roulin</strong>, d&eacute;veloppeur ind&eacute;pendant.</p>
+    <p>Contact : <a href="mailto:troulin@gmail.com">troulin@gmail.com</a></p>
+
+    <h2>2. IA / Mod&egrave;les d'apprentissage automatique (on-device uniquement)</h2>
+    <div class="warning">
+      <p><strong>Toute l'intelligence artificielle de l'app est ex&eacute;cut&eacute;e localement sur ton appareil.</strong> Aucune photo, image ou contenu personnel n'est envoy&eacute; &agrave; un service AI tiers (OpenAI, Anthropic, Google Gemini, Stability AI, Midjourney, etc.).</p>
+    </div>
+    <p>L'app utilise <strong>deux mod&egrave;les pr&eacute;-entra&icirc;n&eacute;s open-source</strong>, embarqu&eacute;s dans le binaire de l'app :</p>
+    <ul>
+      <li><strong>MobileSAM</strong> (Acly/MobileSAM, licence Apache 2.0, ~27 Mo) &mdash; segmentation d'image</li>
+      <li><strong>MI-GAN</strong> (Picsart, licence MIT, ~27 Mo) &mdash; remplissage d'image (inpainting)</li>
+    </ul>
+    <p>Ces mod&egrave;les tournent via <strong>ONNX Runtime React Native</strong> sur ton appareil. Aucune connexion r&eacute;seau n'est requise ni utilis&eacute;e pour la g&eacute;n&eacute;ration des puzzles.</p>
+
+    <h2>3. Tes photos</h2>
+    <p>Quand tu choisis une photo de ta galerie pour cr&eacute;er un puzzle personnalis&eacute; :</p>
+    <ul>
+      <li>La photo est <strong>lue localement</strong> depuis ta biblioth&egrave;que m&eacute;dia (apr&egrave;s ton autorisation explicite)</li>
+      <li>Elle est <strong>trait&eacute;e exclusivement sur ton appareil</strong> (red&eacute;coupage, segmentation, inpainting, op&eacute;rations graphiques)</li>
+      <li>Elle <strong>n'est JAMAIS upload&eacute;e</strong> vers un serveur, cloud ou service AI tiers</li>
+      <li>Elle <strong>n'est JAMAIS transmise hors de ton appareil</strong> sous quelque forme que ce soit</li>
+      <li>Elle <strong>n'est pas stock&eacute;e</strong> dans notre backend</li>
+    </ul>
+
+    <h2>4. Donn&eacute;es que nous collectons</h2>
+    <p>Pour faire fonctionner les classements et les invitations entre amis, nous stockons les donn&eacute;es suivantes sur notre serveur Supabase (h&eacute;berg&eacute; en Europe) :</p>
+    <ul>
+      <li><strong>Pseudo</strong> que tu choisis (16 caract&egrave;res max). Si tu n'en mets pas, "Anonyme".</li>
+      <li><strong>Code ami</strong> de 6 caract&egrave;res al&eacute;atoires (ex. "K7M3QP")</li>
+      <li><strong>Identifiant anonyme</strong> de session (UUID v4 g&eacute;n&eacute;r&eacute; sur ton appareil)</li>
+      <li><strong>Tes scores</strong> (temps de jeu, nombre d'erreurs, points, niveau de badge)</li>
+      <li><strong>S&eacute;ries quotidiennes</strong> du d&eacute;fi du jour</li>
+      <li><strong>Relations d'amiti&eacute;</strong> (lien entre 2 identifiants anonymes)</li>
+    </ul>
+    <p><strong>Nous ne collectons PAS</strong> : ton nom r&eacute;el, ton email, ton num&eacute;ro de t&eacute;l&eacute;phone, ton adresse IP (au-del&agrave; du strict n&eacute;cessaire technique), ta localisation, tes contacts, ton historique de navigation, tes habitudes en dehors de l'app.</p>
+
+    <h2>5. Notifications push (optionnelles)</h2>
+    <p>Si tu autorises les notifications, nous stockons ton <strong>jeton de notification Expo Push</strong> pour t'envoyer :</p>
+    <ul>
+      <li>Le rappel quotidien du d&eacute;fi (configurable / d&eacute;sactivable)</li>
+      <li>Les invitations &agrave; un duel async d'un ami</li>
+    </ul>
+    <p>Tu peux d&eacute;sactiver les notifications &agrave; tout moment dans les R&eacute;glages de ton t&eacute;l&eacute;phone.</p>
+
+    <h2>6. Services tiers utilis&eacute;s</h2>
+    <p>L'app utilise les services tiers suivants, <strong>aucun n'est un service AI</strong> :</p>
+    <ul>
+      <li><strong>Supabase</strong> (BaaS, h&eacute;bergement EU) &mdash; classements, codes ami, m&eacute;tadonn&eacute;es du d&eacute;fi quotidien. Politique : <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></li>
+      <li><strong>RevenueCat</strong> &mdash; gestion de l'achat int&eacute;gr&eacute; "Premium". Politique : <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></li>
+      <li><strong>LevelPlay (ironSource / Unity Ads)</strong> &mdash; publicit&eacute;s vid&eacute;o r&eacute;compens&eacute;es (uniquement apr&egrave;s ton consentement ATT). Politique : <a href="https://www.is.com/privacy-policy/" target="_blank" rel="noopener">is.com/privacy-policy</a></li>
+      <li><strong>Vungle, Liftoff</strong> &mdash; m&eacute;diation publicitaire via LevelPlay (m&ecirc;mes conditions)</li>
+      <li><strong>Sentry</strong> &mdash; rapport de plantages techniques (anonymis&eacute;, sans donn&eacute;e personnelle). Politique : <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">sentry.io/privacy</a></li>
+      <li><strong>Expo / EAS</strong> (build infra) &mdash; pas de donn&eacute;es utilisateur partag&eacute;es en runtime</li>
+      <li><strong>Apple App Store / Google Play</strong> &mdash; achats in-app (g&eacute;r&eacute;s par les plateformes elles-m&ecirc;mes)</li>
+    </ul>
+
+    <h2>7. Publicit&eacute;s</h2>
+    <p>L'app affiche deux types de publicit&eacute;s (sauf si tu as achet&eacute; le Premium) :</p>
+    <ul>
+      <li><strong>R&eacute;compens&eacute;es</strong> : tu regardes une vid&eacute;o pour obtenir un indice gratuit suppl&eacute;mentaire</li>
+      <li><strong>Interstitielles</strong> : entre 3 et 5 photos, sur les &eacute;crans de transition (jamais pendant une partie chronom&eacute;tr&eacute;e)</li>
+    </ul>
+    <p>Sur iOS, nous demandons ton autorisation de tracking publicitaire (ATT) avant tout partage d'identifiant publicitaire (IDFA) avec les r&eacute;gies. Si tu refuses, des pubs non personnalis&eacute;es te sont quand m&ecirc;me servies.</p>
+
+    <h2>8. Achats int&eacute;gr&eacute;s</h2>
+    <p>L'app propose un achat unique <strong>"Premium" &agrave; 3,99 &euro;</strong> (prix r&eacute;f&eacute;rence) qui d&eacute;bloque : tous les modes, z&eacute;ro pub, indices illimit&eacute;s. L'achat est g&eacute;r&eacute; par Apple App Store et Google Play, via RevenueCat pour la v&eacute;rification de receipt c&ocirc;t&eacute; serveur. Nous ne recevons ni ton num&eacute;ro de carte ni d'autres informations bancaires.</p>
+
+    <h2>9. Tes droits (RGPD / CCPA)</h2>
+    <p>Tu as le droit d' :</p>
+    <ul>
+      <li><strong>Acc&eacute;der</strong> &agrave; toutes les donn&eacute;es te concernant</li>
+      <li><strong>Corriger</strong> ton pseudo &agrave; tout moment dans l'app (Profil &gt; Pseudo)</li>
+      <li><strong>Supprimer</strong> ton compte et toutes tes donn&eacute;es</li>
+      <li><strong>Exporter</strong> tes scores</li>
+      <li><strong>Refuser</strong> le suivi publicitaire (R&eacute;glages syst&egrave;me iOS / Android)</li>
+    </ul>
+    <p>Pour exercer ces droits, &eacute;cris-moi &agrave; <a href="mailto:troulin@gmail.com">troulin@gmail.com</a>. R&eacute;ponse sous 30 jours.</p>
+
+    <h2>10. Enfants</h2>
+    <p>L'app n'est pas sp&eacute;cifiquement dirig&eacute;e vers les enfants de moins de 13 ans (16 ans en UE). Si tu es parent et tu d&eacute;tectes que ton enfant utilise l'app, &eacute;cris-moi pour faire supprimer ses donn&eacute;es.</p>
+
+    <h2>11. Conservation des donn&eacute;es</h2>
+    <p>Les scores et codes ami sont conserv&eacute;s tant que tu utilises l'app. Si tu n'utilises plus l'app pendant 24 mois, ton compte peut &ecirc;tre purg&eacute; automatiquement.</p>
+
+    <h2>12. Modifications de cette politique</h2>
+    <p>Nous pouvons mettre &agrave; jour cette politique. Les changements importants seront annonc&eacute;s via une notification ou un message d'accueil dans l'app.</p>
+
+    <h2>13. Juridiction</h2>
+    <p>Cette politique est r&eacute;gie par la loi fran&ccedil;aise. En cas de litige, les tribunaux fran&ccedil;ais sont comp&eacute;tents.</p>
+
+  </div>
+
+  <!-- ============== ENGLISH VERSION ============== -->
+  <div id="lang-en" class="hidden">
+
+    <div class="highlight">
+      <p><strong>One-sentence summary:</strong> your photos stay on your phone, never sent anywhere. AI runs locally on-device. We only store your nickname and anonymous scores.</p>
+    </div>
+
+    <h2>1. Who we are</h2>
+    <p>The "7 erreurs IA" app (English: "7 Mistakes AI") is developed by <strong>Thierry Roulin</strong>, independent developer.</p>
+    <p>Contact: <a href="mailto:troulin@gmail.com">troulin@gmail.com</a></p>
+
+    <h2>2. AI / Machine Learning Models (on-device only)</h2>
+    <div class="warning">
+      <p><strong>All AI processing in this app runs locally on your device.</strong> No photo, image, or personal content is sent to any third-party AI service (OpenAI, Anthropic, Google Gemini, Stability AI, Midjourney, etc.).</p>
+    </div>
+    <p>The app uses <strong>two open-source pre-trained models</strong>, bundled inside the app binary:</p>
+    <ul>
+      <li><strong>MobileSAM</strong> (Acly/MobileSAM, Apache 2.0 license, ~27 MB) &mdash; image segmentation</li>
+      <li><strong>MI-GAN</strong> (Picsart, MIT license, ~27 MB) &mdash; image inpainting</li>
+    </ul>
+    <p>These models run via <strong>ONNX Runtime React Native</strong> on your device. No network connection is required or used for puzzle generation.</p>
+
+    <h2>3. Your photos</h2>
+    <p>When you select a photo from your gallery to create a custom puzzle:</p>
+    <ul>
+      <li>The photo is <strong>read locally</strong> from your media library (after your explicit permission)</li>
+      <li>It is <strong>processed exclusively on your device</strong> (cropping, segmentation, inpainting, graphic operations)</li>
+      <li>It is <strong>NEVER uploaded</strong> to any server, cloud, or third-party AI service</li>
+      <li>It is <strong>NEVER transmitted off-device</strong> in any form whatsoever</li>
+      <li>It is <strong>not stored</strong> in our backend</li>
+    </ul>
+
+    <h2>4. Data we collect</h2>
+    <p>To make leaderboards and friend invites work, we store the following data on our Supabase server (EU-hosted):</p>
+    <ul>
+      <li><strong>Nickname</strong> you choose (max 16 characters). If you don't set one, "Anonyme".</li>
+      <li><strong>Friend code</strong> of 6 random characters (e.g. "K7M3QP")</li>
+      <li><strong>Anonymous session ID</strong> (UUID v4 generated on your device)</li>
+      <li><strong>Your scores</strong> (game time, mistake count, points, badge level)</li>
+      <li><strong>Daily challenge streaks</strong></li>
+      <li><strong>Friend relationships</strong> (link between 2 anonymous IDs)</li>
+    </ul>
+    <p><strong>We do NOT collect</strong>: your real name, email, phone number, IP address (beyond what's technically necessary), location, contacts, browsing history, or habits outside the app.</p>
+
+    <h2>5. Push notifications (optional)</h2>
+    <p>If you opt in to notifications, we store your <strong>Expo Push notification token</strong> to send you:</p>
+    <ul>
+      <li>The daily challenge reminder (configurable / dismissable)</li>
+      <li>Async duel invitations from a friend</li>
+    </ul>
+    <p>You can disable notifications anytime in your phone Settings.</p>
+
+    <h2>6. Third-party services used</h2>
+    <p>The app uses the following third-party services. <strong>None are AI services</strong>:</p>
+    <ul>
+      <li><strong>Supabase</strong> (BaaS, EU hosting) &mdash; leaderboards, friend codes, daily challenge metadata. Policy: <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></li>
+      <li><strong>RevenueCat</strong> &mdash; "Premium" in-app purchase management. Policy: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></li>
+      <li><strong>LevelPlay (ironSource / Unity Ads)</strong> &mdash; rewarded video ads (only after your ATT consent on iOS). Policy: <a href="https://www.is.com/privacy-policy/" target="_blank" rel="noopener">is.com/privacy-policy</a></li>
+      <li><strong>Vungle, Liftoff</strong> &mdash; ad mediation via LevelPlay (same terms)</li>
+      <li><strong>Sentry</strong> &mdash; technical crash reporting (anonymized, no PII). Policy: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">sentry.io/privacy</a></li>
+      <li><strong>Expo / EAS</strong> (build infrastructure) &mdash; no user data shared at runtime</li>
+      <li><strong>Apple App Store / Google Play</strong> &mdash; in-app purchases (handled by the platforms themselves)</li>
+    </ul>
+
+    <h2>7. Advertising</h2>
+    <p>The app shows two types of ads (unless you bought Premium):</p>
+    <ul>
+      <li><strong>Rewarded</strong>: you watch a video for an extra free hint</li>
+      <li><strong>Interstitial</strong>: between 3 and 5 photos, on transition screens (never during a timed game)</li>
+    </ul>
+    <p>On iOS, we request App Tracking Transparency (ATT) authorization before sharing your IDFA with ad networks. If you decline, you still see non-personalized ads.</p>
+
+    <h2>8. In-app purchases</h2>
+    <p>The app offers a single <strong>"Premium" purchase at &euro;3.99</strong> (reference price) which unlocks: all game modes, zero ads, unlimited hints. The purchase is handled by Apple App Store and Google Play, with RevenueCat for server-side receipt verification. We do not receive your card number or other banking information.</p>
+
+    <h2>9. Your rights (GDPR / CCPA)</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> all data about you</li>
+      <li><strong>Correct</strong> your nickname anytime in the app (Profile &gt; Nickname)</li>
+      <li><strong>Delete</strong> your account and all your data</li>
+      <li><strong>Export</strong> your scores</li>
+      <li><strong>Opt out</strong> of ad tracking (iOS / Android system settings)</li>
+    </ul>
+    <p>To exercise these rights, write to <a href="mailto:troulin@gmail.com">troulin@gmail.com</a>. Reply within 30 days.</p>
+
+    <h2>10. Children</h2>
+    <p>The app is not specifically directed at children under 13 (16 in EU). If you are a parent and notice your child uses the app, write to me to have their data removed.</p>
+
+    <h2>11. Data retention</h2>
+    <p>Scores and friend codes are kept as long as you use the app. If you don't use the app for 24 months, your account may be automatically purged.</p>
+
+    <h2>12. Changes to this policy</h2>
+    <p>We may update this policy. Important changes will be announced via a notification or welcome message in the app.</p>
+
+    <h2>13. Jurisdiction</h2>
+    <p>This policy is governed by French law. In case of dispute, French courts have jurisdiction.</p>
+
+  </div>
+
+  <div class="footer">
+    7 erreurs IA &middot; v1.0.5 &middot; <a href="mailto:troulin@gmail.com">troulin@gmail.com</a>
+  </div>
+
+</div>
+
+<script>
+function showLang(lang) {
+  document.getElementById('lang-fr').classList.toggle('hidden', lang !== 'fr');
+  document.getElementById('lang-en').classList.toggle('hidden', lang !== 'en');
+  document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.documentElement.lang = lang;
+  try { history.replaceState(null, '', '#' + lang); } catch (e) {}
+}
+document.getElementById('btn-fr').addEventListener('click', function(e) { e.preventDefault(); showLang('fr'); });
+document.getElementById('btn-en').addEventListener('click', function(e) { e.preventDefault(); showLang('en'); });
+// Auto-detect : ?lang=en, #en, ou navigator.language
+(function() {
+  var url = new URL(window.location.href);
+  var qLang = url.searchParams.get('lang');
+  var hLang = (window.location.hash || '').replace('#', '');
+  var nLang = (navigator.language || 'fr').toLowerCase().startsWith('fr') ? 'fr' : 'en';
+  showLang(qLang || hLang || nLang);
+})();
+</script>
+</body>
+</html>
