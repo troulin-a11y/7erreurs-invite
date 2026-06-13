@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Assistance - 7 erreurs IA</title>
+<meta name="description" content="Aide et support de l'app 7 erreurs IA : jeu des differences genere par IA sur tes photos.">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #0b0f17; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(180deg, #0b0f17 0%, #171c2b 100%);
+  color: #e6e9ef; min-height: 100vh; padding: 32px 20px; line-height: 1.6;
+}
+.container { max-width: 720px; margin: 0 auto; }
+.logo { font-size: 52px; text-align: center; margin-bottom: 8px; }
+h1 { color: #20d7ff; font-size: 30px; font-weight: 900; text-align: center; margin-bottom: 6px; letter-spacing: -0.5px; }
+.sub { color: #9aa3b2; font-size: 15px; text-align: center; margin-bottom: 28px; }
+h2 { color: #fff; font-size: 20px; font-weight: 900; margin-top: 30px; margin-bottom: 10px; border-bottom: 1px solid #3a4663; padding-bottom: 6px; }
+h3 { color: #ffd166; font-size: 16px; font-weight: 800; margin-top: 18px; margin-bottom: 6px; }
+p, li { color: #c4cad6; margin-bottom: 10px; }
+ul { margin-left: 22px; }
+strong { color: #fff; }
+a { color: #2477ff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.contact { background: rgba(36,119,255,0.10); border: 1.5px solid #2477ff; border-radius: 16px; padding: 18px 20px; margin: 18px 0; text-align: center; }
+.contact a { font-size: 18px; font-weight: 900; color: #20d7ff; }
+.lang { display: flex; gap: 10px; justify-content: center; margin: 20px 0 28px; }
+.lang a { padding: 7px 16px; border: 1px solid #3a4663; border-radius: 8px; color: #c4cad6; font-weight: 800; font-size: 13px; }
+.lang a.active { background: #2477ff; color: #fff; border-color: #2477ff; }
+.footer { color: #6f7a91; font-size: 12px; text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #3a4663; }
+.hidden { display: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">&#x1F50D;</div>
+  <h1>Assistance — 7 erreurs IA</h1>
+  <p class="sub">Le jeu des 7 erreurs ou l'IA cree les differences sur tes propres photos.</p>
+
+  <div class="lang">
+    <a id="btn-fr" href="#" class="active">Francais</a>
+    <a id="btn-en" href="#">English</a>
+  </div>
+
+  <div class="contact">
+    Une question, un bug, une suggestion ?<br>
+    <a href="mailto:troulin@gmail.com">troulin@gmail.com</a><br>
+    <span style="color:#9aa3b2;font-size:13px;">Reponse sous 48h</span>
+  </div>
+
+  <!-- FR -->
+  <div id="lang-fr">
+    <h2>Foire aux questions</h2>
+
+    <h3>Comment jouer ?</h3>
+    <p>Choisis une photo de ta galerie (ou joue le defi du jour). L'IA genere une version
+    modifiee avec des differences. Les 2 images sont empilees : trouve et tape les differences,
+    elles s'entourent en rouge sur les deux photos.</p>
+
+    <h3>Quels sont les niveaux ?</h3>
+    <p>Facile (7 differences), Moyen (11) et Difficile (15). Plus le niveau est eleve, plus les
+    differences sont petites et subtiles.</p>
+
+    <h3>Les indices</h3>
+    <p>Tu as 3 indices gratuits par partie. Au-dela, tu peux regarder une courte video pour gagner
+    2 indices, ou passer Premium pour des indices illimites.</p>
+
+    <h3>Premium</h3>
+    <p>L'achat unique Premium debloque tous les modes, supprime les publicites et offre les indices
+    illimites. Restaurable sur tes autres appareils via "Restaurer les achats".</p>
+
+    <h3>Mes photos sont-elles envoyees quelque part ?</h3>
+    <p><strong>Non.</strong> Tout le traitement IA se fait sur ton appareil. Tes photos ne quittent
+    jamais ton telephone. Voir la <a href="privacy.html">politique de confidentialite</a>.</p>
+
+    <h3>Le defi du jour</h3>
+    <p>Une photo commune a tous les joueurs chaque jour. Resous-la le plus vite possible et grimpe
+    au classement mondial. Un seul essai par jour.</p>
+
+    <h3>J'ai trouve un bug</h3>
+    <p>Ecris-nous a <a href="mailto:troulin@gmail.com">troulin@gmail.com</a> en decrivant le
+    probleme et ton modele d'appareil. Merci !</p>
+  </div>
+
+  <!-- EN -->
+  <div id="lang-en" class="hidden">
+    <h2>Frequently asked questions</h2>
+
+    <h3>How to play?</h3>
+    <p>Pick a photo from your gallery (or play the daily challenge). The AI generates a modified
+    version with differences. The two images are stacked: find and tap the differences, they get
+    circled in red on both photos.</p>
+
+    <h3>Difficulty levels</h3>
+    <p>Easy (7 differences), Medium (11) and Hard (15). Higher levels have smaller, subtler
+    differences.</p>
+
+    <h3>Hints</h3>
+    <p>You get 3 free hints per game. Beyond that, watch a short video to earn 2 hints, or go
+    Premium for unlimited hints.</p>
+
+    <h3>Premium</h3>
+    <p>The one-time Premium purchase unlocks all modes, removes ads and grants unlimited hints.
+    Restorable on your other devices via "Restore purchases".</p>
+
+    <h3>Are my photos sent anywhere?</h3>
+    <p><strong>No.</strong> All AI processing happens on your device. Your photos never leave your
+    phone. See the <a href="privacy.html">privacy policy</a>.</p>
+
+    <h3>Daily challenge</h3>
+    <p>One photo shared by all players each day. Solve it as fast as possible and climb the global
+    leaderboard. One attempt per day.</p>
+
+    <h3>I found a bug</h3>
+    <p>Email us at <a href="mailto:troulin@gmail.com">troulin@gmail.com</a> describing the issue and
+    your device model. Thank you!</p>
+  </div>
+
+  <div class="footer">
+    7 erreurs IA &middot; <a href="privacy.html">Confidentialite</a> &middot;
+    <a href="mailto:troulin@gmail.com">Contact</a>
+  </div>
+</div>
+<script>
+function show(l){
+  document.getElementById('lang-fr').classList.toggle('hidden', l!=='fr');
+  document.getElementById('lang-en').classList.toggle('hidden', l!=='en');
+  document.getElementById('btn-fr').classList.toggle('active', l==='fr');
+  document.getElementById('btn-en').classList.toggle('active', l==='en');
+  document.documentElement.lang = l;
+}
+document.getElementById('btn-fr').addEventListener('click',function(e){e.preventDefault();show('fr');});
+document.getElementById('btn-en').addEventListener('click',function(e){e.preventDefault();show('en');});
+show((navigator.language||'fr').toLowerCase().startsWith('fr')?'fr':'en');
+</script>
+</body>
+</html>
