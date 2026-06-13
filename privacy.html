@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Politique de confidentialité - 7 erreurs IA</title>
-<meta name="description" content="Politique de confidentialite de l'app 7 erreurs IA. Toute l'IA est on-device. Aucune photo n'est envoyee a un serveur.">
+<meta name="description" content="Politique de confidentialite de l'app 7 erreurs IA. La generation IA est 100% on-device. Les photos restent locales, sauf le defi photo entre amis (partage prive avec l'ami choisi, supprime sous 7 jours).">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { background: #0b0f17; }
@@ -62,7 +62,7 @@ a:hover { text-decoration: underline; }
 <div class="container">
 
   <h1>Politique de confidentialité</h1>
-  <div class="meta">7 erreurs IA &middot; Derni&egrave;re mise &agrave; jour : 10 juin 2026</div>
+  <div class="meta">7 erreurs IA &middot; Derni&egrave;re mise &agrave; jour : 13 juin 2026</div>
 
   <div class="lang-switch">
     <a id="btn-fr" href="#" class="active">Fran&ccedil;ais</a>
@@ -73,7 +73,7 @@ a:hover { text-decoration: underline; }
   <div id="lang-fr">
 
     <div class="highlight">
-      <p><strong>R&eacute;sum&eacute; en une phrase :</strong> tes photos restent sur ton t&eacute;l&eacute;phone, jamais envoy&eacute;es nulle part. L'IA tourne en local. On stocke uniquement ton pseudo et tes scores anonymes.</p>
+      <p><strong>R&eacute;sum&eacute; en une phrase :</strong> la g&eacute;n&eacute;ration par IA est <strong>100% locale</strong> et, en jeu solo, tes photos restent sur ton t&eacute;l&eacute;phone. Seul le mode <strong>&laquo; d&eacute;fier un ami avec ma photo &raquo;</strong> envoie ta photo <strong>en priv&eacute;</strong> &agrave; l'ami choisi (supprim&eacute;e sous 7 jours). On stocke aussi ton pseudo et tes scores anonymes.</p>
     </div>
 
     <h2>1. Qui sommes-nous</h2>
@@ -92,7 +92,7 @@ a:hover { text-decoration: underline; }
     <p>Ces mod&egrave;les tournent via <strong>ONNX Runtime React Native</strong> sur ton appareil. Aucune connexion r&eacute;seau n'est requise ni utilis&eacute;e pour la g&eacute;n&eacute;ration des puzzles.</p>
 
     <h2>3. Tes photos</h2>
-    <p>Quand tu choisis une photo de ta galerie pour cr&eacute;er un puzzle personnalis&eacute; :</p>
+    <p>Quand tu choisis une photo de ta galerie pour cr&eacute;er un puzzle personnalis&eacute; <strong>en jeu solo</strong> :</p>
     <ul>
       <li>La photo est <strong>lue localement</strong> depuis ta biblioth&egrave;que m&eacute;dia (apr&egrave;s ton autorisation explicite)</li>
       <li>Elle est <strong>trait&eacute;e exclusivement sur ton appareil</strong> (red&eacute;coupage, segmentation, inpainting, op&eacute;rations graphiques)</li>
@@ -100,6 +100,9 @@ a:hover { text-decoration: underline; }
       <li>Elle <strong>n'est JAMAIS transmise hors de ton appareil</strong> sous quelque forme que ce soit</li>
       <li>Elle <strong>n'est pas stock&eacute;e</strong> dans notre backend</li>
     </ul>
+
+    <h3>D&eacute;fi photo avec un ami (mode &laquo; d&eacute;fier avec ma photo &raquo;)</h3>
+    <p>Si tu choisis de <strong>d&eacute;fier un ami avec ta propre photo</strong> : le puzzle est <strong>toujours g&eacute;n&eacute;r&eacute; sur ton appareil</strong>, puis ta photo et le puzzle g&eacute;n&eacute;r&eacute; sont <strong>upload&eacute;s en priv&eacute;</strong> sur notre serveur Supabase (EU), <strong>uniquement</strong> pour que l'ami que tu as choisi puisse jouer le m&ecirc;me puzzle. Ces images sont <strong>chiffr&eacute;es en transit</strong>, accessibles <strong>uniquement par toi et cet ami</strong>, et <strong>supprim&eacute;es automatiquement sous 7 jours</strong>. Tu peux <strong>signaler</strong> un contenu, <strong>bloquer</strong> un ami ou <strong>supprimer</strong> un d&eacute;fi &agrave; tout moment. En envoyant une photo, tu acceptes nos <a href="cgu.html">Conditions d'utilisation</a> (interdiction de contenu offensant ou ill&eacute;gal).</p>
 
     <h2>4. Donn&eacute;es que nous collectons</h2>
     <p>Pour faire fonctionner les classements et les invitations entre amis, nous stockons les donn&eacute;es suivantes sur notre serveur Supabase (h&eacute;berg&eacute; en Europe) :</p>
@@ -110,6 +113,7 @@ a:hover { text-decoration: underline; }
       <li><strong>Tes scores</strong> (temps de jeu, nombre d'erreurs, points, niveau de badge)</li>
       <li><strong>S&eacute;ries quotidiennes</strong> du d&eacute;fi du jour</li>
       <li><strong>Relations d'amiti&eacute;</strong> (lien entre 2 identifiants anonymes)</li>
+      <li><strong>Photos de d&eacute;fi</strong> &mdash; <em>uniquement</em> si tu utilises &laquo; d&eacute;fier avec ma photo &raquo; : la photo + le puzzle g&eacute;n&eacute;r&eacute;, stock&eacute;s temporairement (max 7 jours), partag&eacute;s avec l'ami choisi, puis supprim&eacute;s automatiquement</li>
     </ul>
     <p><strong>Nous ne collectons PAS</strong> : ton nom r&eacute;el, ton email, ton num&eacute;ro de t&eacute;l&eacute;phone, ton adresse IP (au-del&agrave; du strict n&eacute;cessaire technique), ta localisation, tes contacts, ton historique de navigation, tes habitudes en dehors de l'app.</p>
 
@@ -173,7 +177,7 @@ a:hover { text-decoration: underline; }
   <div id="lang-en" class="hidden">
 
     <div class="highlight">
-      <p><strong>One-sentence summary:</strong> your photos stay on your phone, never sent anywhere. AI runs locally on-device. We only store your nickname and anonymous scores.</p>
+      <p><strong>One-sentence summary:</strong> AI generation is <strong>100% on-device</strong> and, in solo play, your photos stay on your phone. Only the <strong>"challenge a friend with my photo"</strong> mode sends your photo <strong>privately</strong> to the chosen friend (deleted within 7 days). We also store your nickname and anonymous scores.</p>
     </div>
 
     <h2>1. Who we are</h2>
@@ -192,7 +196,7 @@ a:hover { text-decoration: underline; }
     <p>These models run via <strong>ONNX Runtime React Native</strong> on your device. No network connection is required or used for puzzle generation.</p>
 
     <h2>3. Your photos</h2>
-    <p>When you select a photo from your gallery to create a custom puzzle:</p>
+    <p>When you select a photo from your gallery to create a custom puzzle <strong>in solo play</strong>:</p>
     <ul>
       <li>The photo is <strong>read locally</strong> from your media library (after your explicit permission)</li>
       <li>It is <strong>processed exclusively on your device</strong> (cropping, segmentation, inpainting, graphic operations)</li>
@@ -200,6 +204,9 @@ a:hover { text-decoration: underline; }
       <li>It is <strong>NEVER transmitted off-device</strong> in any form whatsoever</li>
       <li>It is <strong>not stored</strong> in our backend</li>
     </ul>
+
+    <h3>Photo challenge with a friend ("challenge with my photo" mode)</h3>
+    <p>If you choose to <strong>challenge a friend with your own photo</strong>: the puzzle is <strong>always generated on your device</strong>, then your photo and the generated puzzle are <strong>uploaded privately</strong> to our Supabase server (EU), <strong>solely</strong> so the friend you picked can play the same puzzle. These images are <strong>encrypted in transit</strong>, accessible <strong>only by you and that friend</strong>, and <strong>automatically deleted within 7 days</strong>. You can <strong>report</strong> content, <strong>block</strong> a friend, or <strong>delete</strong> a challenge at any time. By sending a photo, you accept our <a href="cgu.html">Terms of Use</a> (no offensive or illegal content).</p>
 
     <h2>4. Data we collect</h2>
     <p>To make leaderboards and friend invites work, we store the following data on our Supabase server (EU-hosted):</p>
@@ -210,6 +217,7 @@ a:hover { text-decoration: underline; }
       <li><strong>Your scores</strong> (game time, mistake count, points, badge level)</li>
       <li><strong>Daily challenge streaks</strong></li>
       <li><strong>Friend relationships</strong> (link between 2 anonymous IDs)</li>
+      <li><strong>Challenge photos</strong> &mdash; <em>only</em> if you use "challenge with my photo": the photo + generated puzzle, stored temporarily (max 7 days), shared with the chosen friend, then automatically deleted</li>
     </ul>
     <p><strong>We do NOT collect</strong>: your real name, email, phone number, IP address (beyond what's technically necessary), location, contacts, browsing history, or habits outside the app.</p>
 
