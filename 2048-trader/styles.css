@@ -1,0 +1,61 @@
+:root {
+  color-scheme: dark;
+  --ink: #070a0c;
+  --surface: #0d1417;
+  --line: rgba(135, 255, 207, 0.16);
+  --text: #f2f7f5;
+  --muted: #93a49f;
+  --green: #7dffc4;
+  --cyan: #55dfff;
+  --gold: #f4c96b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 18% -8%, rgba(85, 223, 255, 0.10), transparent 28rem),
+    radial-gradient(circle at 88% 0%, rgba(125, 255, 196, 0.08), transparent 24rem),
+    var(--ink);
+  color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+}
+
+main { width: min(760px, calc(100% - 36px)); margin: 0 auto; padding: 54px 0 72px; }
+
+nav { display: flex; justify-content: space-between; gap: 18px; margin-bottom: 46px; }
+nav a, a { color: var(--cyan); text-decoration: none; }
+nav a:hover, a:hover { text-decoration: underline; }
+
+.brand { color: var(--green); font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.lang { color: var(--muted); font-size: 14px; }
+h1 { max-width: 680px; margin: 0 0 14px; font-size: clamp(38px, 9vw, 64px); line-height: .98; letter-spacing: -.055em; }
+.lede { max-width: 650px; color: var(--muted); font-size: 18px; margin: 0 0 42px; }
+.meta { color: var(--gold); font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+
+section { border-top: 1px solid var(--line); padding: 28px 0 18px; }
+h2 { margin: 0 0 10px; font-size: 21px; letter-spacing: -.02em; }
+h3 { margin: 18px 0 6px; font-size: 16px; }
+p, li { color: #c8d3cf; }
+ul { padding-left: 20px; }
+li + li { margin-top: 6px; }
+strong { color: var(--text); }
+
+.contact {
+  margin: 34px 0;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(85, 223, 255, .07), rgba(125, 255, 196, .04));
+}
+.contact p { margin: 4px 0; }
+.contact a { color: var(--green); font-size: 19px; font-weight: 800; }
+
+footer { margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+
+@media (max-width: 520px) {
+  main { padding-top: 30px; }
+  nav { margin-bottom: 34px; }
+  .lede { font-size: 16px; }
+}
