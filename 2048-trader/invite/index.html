@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#070a0c" />
+    <meta property="og:title" content="2048 Trader — Friend Duel" />
+    <meta
+      property="og:description"
+      content="Same market. Same seed. Highest fictional P&amp;L wins."
+    />
+    <title>2048 Trader — Friend Duel</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background: #070a0c;
+        color: #f1f5f3;
+      }
+      body {
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: grid;
+        place-items: center;
+        padding: max(28px, env(safe-area-inset-top)) 22px max(28px, env(safe-area-inset-bottom));
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background:
+          radial-gradient(circle at 18% 0%, rgba(59, 229, 167, 0.12), transparent 34%),
+          radial-gradient(circle at 100% 78%, rgba(155, 109, 255, 0.12), transparent 38%), #070a0c;
+      }
+      main {
+        width: min(100%, 390px);
+      }
+      .brand {
+        display: flex;
+        align-items: baseline;
+        gap: 9px;
+        margin-bottom: 52px;
+      }
+      .mark {
+        font-size: 34px;
+        line-height: 1;
+        font-weight: 950;
+        letter-spacing: -2px;
+        color: #83f64d;
+      }
+      .brand-name {
+        font-size: 18px;
+        font-weight: 950;
+        letter-spacing: 1.6px;
+      }
+      .eyebrow {
+        color: #9b6dff;
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 2px;
+      }
+      h1 {
+        margin: 10px 0 10px;
+        font-size: clamp(32px, 10vw, 44px);
+        line-height: 0.98;
+        letter-spacing: -1.7px;
+      }
+      .lead {
+        margin: 0 0 34px;
+        color: #a7b4af;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      .duel-line {
+        border-top: 1px solid #26302d;
+        border-bottom: 1px solid #26302d;
+        padding: 18px 0;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .label {
+        display: block;
+        color: #6f7d78;
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 1.5px;
+      }
+      .value {
+        display: block;
+        margin-top: 5px;
+        font-size: 17px;
+        font-weight: 900;
+      }
+      .code {
+        color: #9b6dff;
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+      }
+      .button {
+        min-height: 62px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        border-radius: 18px;
+        padding: 0 18px;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 950;
+        letter-spacing: 0.7px;
+      }
+      .open {
+        color: #070a0c;
+        background: #83f64d;
+      }
+      .store {
+        margin-top: 10px;
+        color: #f1f5f3;
+        background: #14191b;
+        border: 1px solid #2a3431;
+      }
+      .hint {
+        margin: 18px 4px 0;
+        color: #78847f;
+        font-size: 12px;
+        line-height: 1.45;
+        text-align: center;
+      }
+      .error {
+        color: #ff6c69;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="content" hidden>
+      <div class="brand"><span class="mark">2048</span><span class="brand-name">TRADER</span></div>
+      <div class="eyebrow" data-en="FRIEND DUEL" data-fr="DUEL ENTRE AMIS">FRIEND DUEL</div>
+      <h1 data-en="A trader challenged you." data-fr="Un trader te défie.">
+        A trader challenged you.
+      </h1>
+      <p
+        class="lead"
+        data-en="Same fictional market, same seed. Build the highest P&amp;L."
+        data-fr="Même marché fictif, même seed. Construis le meilleur P&amp;L."
+      >
+        Same fictional market, same seed. Build the highest P&amp;L.
+      </p>
+      <div class="duel-line">
+        <div>
+          <span class="label" data-en="CHALLENGER" data-fr="ADVERSAIRE">CHALLENGER</span
+          ><span class="value" id="challenger">Trader</span>
+        </div>
+        <div>
+          <span class="label" data-en="DUEL CODE" data-fr="CODE DU DUEL">DUEL CODE</span
+          ><span class="value code" id="duel-code">——</span>
+        </div>
+      </div>
+      <a class="button open" id="open-app" href="#" data-en="OPEN THE DUEL" data-fr="OUVRIR LE DUEL"
+        >OPEN THE DUEL</a
+      >
+      <a
+        class="button store"
+        href="https://apps.apple.com/app/id6799492587"
+        data-en="NO APP? DOWNLOAD ON THE APP STORE"
+        data-fr="PAS L’APP ? TÉLÉCHARGER SUR L’APP STORE"
+      >
+        NO APP? DOWNLOAD ON THE APP STORE
+      </a>
+      <p
+        class="hint"
+        data-en="After opening, both traders are saved as friends for future rematches."
+        data-fr="Après ouverture, les deux traders sont enregistrés comme amis pour les prochaines revanches."
+      >
+        After opening, both traders are saved as friends for future rematches.
+      </p>
+    </main>
+    <main id="error" class="error" hidden>Invalid or incomplete Duel invitation.</main>
+    <script>
+      (() => {
+        const params = new URLSearchParams(location.search);
+        const seed = (params.get('seed') || '').trim().slice(0, 64);
+        const from = (params.get('from') || '')
+          .toUpperCase()
+          .replace(/[^A-Z0-9]/g, '')
+          .slice(0, 12);
+        const name = (params.get('name') || 'Trader').trim().replace(/\s+/g, ' ').slice(0, 18);
+        const valid = seed.length >= 6 && from.length >= 6;
+        if (!valid) {
+          document.getElementById('error').hidden = false;
+          return;
+        }
+
+        const french = (navigator.language || '').toLowerCase().startsWith('fr');
+        document.documentElement.lang = french ? 'fr' : 'en';
+        document.querySelectorAll('[data-en]').forEach((element) => {
+          element.innerHTML = element.getAttribute(french ? 'data-fr' : 'data-en');
+        });
+        document.getElementById('challenger').textContent = name || 'Trader';
+        document.getElementById('duel-code').textContent = seed
+          .replace(/^duel-/i, '')
+          .toUpperCase();
+
+        const query = new URLSearchParams({ seed, from, name });
+        const appUrl = `trader2048://duel?${query.toString()}`;
+        document.getElementById('open-app').href = appUrl;
+        document.getElementById('content').hidden = false;
+
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent || '')) {
+          setTimeout(() => {
+            location.href = appUrl;
+          }, 450);
+        }
+      })();
+    </script>
+  </body>
+</html>
